@@ -1,0 +1,193 @@
+@import "../../App.scss";
+
+.contact-form-container {
+  padding: 0px 96px;
+  padding-bottom: 76px;
+
+  @include mobile {
+    padding: 30px 11px;
+  }
+
+  @include tablet {
+    padding: 0px 26px;
+    padding-bottom: 56px;
+    .right-section {
+      // padding-left: 15px;
+    }
+  }
+
+  @include desktop {
+    .form-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+  }
+
+  .contactTitle {
+    .title-comp {
+      display: inline-block;
+      font-size: 58px;
+      @include mobile {
+        font-size: 23px;
+        padding-bottom: 25px;
+      }
+      @include tablet {
+        font-size: 44px;
+        // padding-bottom: 25px;
+      }
+    }
+    hr {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 50px;
+
+    @include mobile {
+      padding: 0px;
+    }
+
+    .left-section {
+      background: rgba(45, 38, 211, 0.2);
+      width: 100%;
+      text-align: center;
+
+      .left-section-image {
+        padding: 50px;
+      }
+    }
+
+    .right-section {
+      // padding-left: 30px;
+
+      @include mobile {
+        padding: 0px;
+      }
+
+      .right-section-description {
+        color: #000;
+        font-family: Poppins;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.15px;
+        text-transform: capitalize;
+        padding-bottom: 8px;
+        text-align: center;
+
+        @include mobile {
+          font-size: 12px;
+          line-height: 12px;
+          padding: 15px 11px;
+          letter-spacing: 0.4px;
+        }
+        @include tablet {
+          font-size: 18px;
+        }
+        @include desktop {
+          font-size: 23px;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 0px 40px;
+
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+          width: 49.33%;
+          padding-right: 5px;
+
+          @include mobile {
+            padding-right: 5px;
+            width: 48%;
+          }
+
+          @include tablet {
+            width: 48.33%;
+            padding-right: 5px;
+          }
+
+          .form-label {
+            color: #808080;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0.15px;
+            text-transform: capitalize;
+            padding-bottom: 10px;
+            padding-top: 5px;
+          }
+
+          .form-input {
+            height: 42px;
+            border-radius: 10px;
+            border: 1px solid #d9d9d9;
+            background: #fff;
+            padding-left: 15px;
+          }
+
+          #message {
+            height: 97px;
+            padding-left: 0;
+            // width: 100%;
+            flex-shrink: 0;
+            padding-left: 15px;
+            padding-top: 10px;
+            line-height: 24px;
+            // width: calc(100% - 20px);
+          }
+        }
+
+        .textareaBox {
+          width: 100%;
+          padding: 14px 0px;
+        }
+        .formbutton {
+          text-align: left;
+          width: 100%;
+          padding-left: 0;
+
+          @include mobile {
+            padding-top: 24px;
+            padding-bottom: 30px;
+            margin-left: 12px;
+          }
+        }
+      }
+
+      button {
+        display: inline-flex;
+        padding: 14px 100px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        background: #2d26d3;
+        color: #fff;
+        font-family: Poppins;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.25px;
+        text-transform: capitalize;
+
+        @include mobile {
+          padding: 14px 40px;
+          margin-top: 18px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@import "../../App.scss";
+
+.Career-section {
+  display: block;
+  text-align: center;
+  padding: 0px 96px;
+  padding-bottom: 76px;
+
+  @include mobile {
+    padding: 15px 11px;
+  }
+  @include tablet {
+    padding: 30px 26px;
+  }
+
+  .careerClass {
+    @include mobile {
+      display: flex;
+      align-items: center;
+      padding-bottom: 25px;
+    }
+  }
+
+  .Career-section-description {
+    color: #000;
+    font-family: Poppins;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.15px;
+    text-transform: capitalize;
+    text-align: center;
+
+    @include mobile {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 12px; /* 100% */
+      letter-spacing: 0.4px;
+      text-transform: capitalize;
+      padding: 0;
+    }
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  .Career-section-link {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 142px;
+      height: 48px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      border: 1px solid #2d26d3;
+      background: #2d26d3;
+      box-shadow: 0px 4px 4px 0px rgba(173, 173, 173, 0.15);
+      color: #fff;
+      font-family: Poppins;
+      font-size: 16px;
+      letter-spacing: 0.15px;
+      margin-left: 5px;
+
+      @include mobile {
+        max-width: 40%;
+        height: 27px;
+        margin-left: 9px;
+      }
+    }
+  }
+
+  .title-container {
+    .title-comp {
+      padding-bottom: 25px;
+      @include mobile {
+        font-size: 23px;
+        padding: 0;
+      }
+
+      @include tablet {
+        font-size: 44px;
+      }
+    }
+
+    hr {
+      display: none;
+    }
+  }
+
+  .Career-section-description {
+    text-align: center;
+    padding-top: 18px;
+    font-weight: 400;
+    color: #000;
+    font-family: Poppins;
+    padding: 0px;
+    padding-bottom: 40px;
+
+    @include mobile {
+      padding: 0px;
+      padding: 0px 11px;
+    }
+  }
+  .Career-section-link {
+    padding-top: 18px;
+  }
+  .searchContainer {
+    margin-top: 18px;
+  }
+
+  .searchContainer {
+    height: 42px;
+
+    input {
+      border: none;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      width: 70%;
+      height: 42px;
+      box-shadow: 0px 1px 4px 1px rgba(217, 217, 217, 0.3);
+      border: 1px solid #d9d9d9;
+      padding-left: 10px;
+    }
+    button {
+      margin-left: -10px;
+      width: 82px;
+      height: 42px;
+    }
+  }
+}

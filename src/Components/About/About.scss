@@ -1,0 +1,111 @@
+@import "../../App.scss";
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.about-container {
+  padding: 76px 100px;
+  padding-top: 100px;
+
+  @include mobile {
+    padding: 30px 11px;
+  }
+
+  @include tablet {
+    padding: 21px 13px;
+  }
+
+  .aboutclass {
+    width: 100%;
+    display: flex;
+
+    @include mobile {
+      padding-bottom: 25px;
+
+      .title-comp {
+        font-size: 23px;
+      }
+
+      hr {
+        display: none;
+      }
+    }
+
+    @include tablet {
+      .title-comp {
+        font-size: 44px;
+      }
+    }
+  }
+
+  &_inner {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      display: flex;
+    }
+    @include tablet {
+      padding: 33px 0px;
+    }
+  }
+
+  .image-section {
+    flex: 1;
+    img {
+      width: 75%;
+      height: 100%;
+      flex-shrink: 0;
+      @include mobile {
+        // width: 180px;
+        // height: 180px;
+        flex-shrink: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .description-section {
+    flex: 1;
+
+    .aboutclass {
+      color: #000000;
+    }
+
+    .description {
+      width: 100%;
+      font-size: 23px;
+      font-weight: 400;
+      letter-spacing: 0.15px;
+      color: #000000;
+      word-break: break-one;
+      hyphens: auto;
+      @include mobile {
+        color: #000;
+        font-family: Poppins;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px; /* 100% */
+        letter-spacing: 0.4px;
+      }
+
+      @include tablet {
+        font-size: 17px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+  }
+}

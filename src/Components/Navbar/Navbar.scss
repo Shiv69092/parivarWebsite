@@ -1,0 +1,229 @@
+@import "../../App.scss";
+
+.active {
+  border: none;
+  outline: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  // font-size: 18px;
+  // padding: 10px 16px;
+}
+.site-header {
+  background-color: #fff;
+  // background-color: red;
+  padding: 0px 96px;
+  height: 6.5rem;
+
+  @include mobile {
+    padding: 0;
+    background: black;
+    padding: 5px 2px;
+    height: 3rem;
+  }
+  @include tablet {
+    padding: 0px 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @include mobile {
+      padding: 0px 14px;
+      width: 90%;
+    }
+    p {
+      display: none;
+    }
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      // position: relative;
+    }
+
+    &__toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: #000;
+      display: none;
+
+      @include mobile {
+        display: block;
+        // position: absolute;
+        right: 16px;
+        z-index: 1;
+        color: white;
+        top: 12px;
+        right: 22px;
+
+        svg {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+
+    .nav__wrapper {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      @include mobile {
+        position: absolute;
+        right: 65px;
+        top: 14px;
+        width: 37%;
+        height: auto;
+        padding: 17px 0px;
+        display: none;
+        // gap: 1px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+        border-radius: 30px 0px 0px 30px;
+        background: #fff;
+
+        p {
+          color: #000;
+          font-family: Poppins;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          text-transform: capitalize;
+          margin: 0;
+          display: block;
+        }
+      }
+
+      @include small-device {
+        right: 58px;
+      }
+
+      .nav__item {
+        // margin: 0 10px;
+        color: red;
+        font-family: "Poppins", sans-serif;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0.15px;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 16px;
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+
+        @include mobile {
+          width: 80%;
+          margin: 0;
+          padding: 0px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.292);
+          padding-bottom: 6px;
+          margin-left: 25px;
+          display: block;
+
+          a {
+            text-decoration: none;
+            color: #000;
+            font-family: Poppins;
+            font-size: 13px;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 104.849px;
+    height: 100px;
+    flex-shrink: 0;
+    @include mobile {
+      // position: absolute;
+      z-index: 1;
+      width: 41.94px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+  }
+  .nav__wrapper {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .nav__item {
+      margin: 10px;
+      color: #000;
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0.15px;
+      text-transform: capitalize;
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+    }
+  }
+
+  &.open {
+    .nav__wrapper {
+      display: flex;
+      @include mobile {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+
+        @-webkit-keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,249 @@
+@import "../../App.scss";
+
+.footer {
+  background: black;
+  color: white;
+  padding: 76px 96px;
+
+  @include mobile {
+    background: black;
+    color: white;
+    padding: 14px 11px;
+  }
+
+  @include tablet {
+    padding: 28px 28px;
+  }
+
+  .container {
+    display: flex;
+
+    .nav-list {
+      flex: 1;
+      line-height: 3rem;
+
+      @include mobile {
+        line-height: 2rem;
+      }
+
+      h2 {
+        margin: 0;
+        color: #fff;
+        font-family: Poppins;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.25px;
+
+        @include mobile {
+          color: #fff;
+          font-family: Poppins;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          letter-spacing: 0.1px;
+          text-transform: capitalize;
+          line-height: 2rem;
+        }
+
+        @include tablet {
+          font-weight: 400;
+          font-size: 1.2rem;
+          font-family: Poppins;
+          letter-spacing: 0.25px;
+          margin: 0;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        // padding: 0px 10px;
+        cursor: pointer;
+      }
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+
+      img {
+        width: 209.699px;
+        height: 200px;
+
+        @include mobile {
+          width: 104.849px;
+          height: 100px;
+          flex-shrink: 0;
+        }
+
+        @include tablet {
+          width: 170.699px;
+          height: 161px;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+
+      h4 {
+        color: #fff;
+        font-family: Poppins;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.25px;
+        margin: 0;
+
+        @include mobile {
+          color: #fff;
+          font-family: Poppins;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 14px;
+          /* 100% */
+          letter-spacing: 0.1px;
+          text-transform: capitalize;
+          line-height: 2rem;
+        }
+
+        @include tablet {
+          font-size: 1.2rem;
+        }
+      }
+
+      // .icon-list {
+      //   display: flex;
+      //   flex-direction: row;
+      //   gap: 10px;
+      //   .icon-list {
+      //   display: flex;
+      //   flex-direction: row;
+      //   gap: 10px;
+
+      //   svg {
+      //     @include mobile {
+      //       width: 94px;
+      //       height: 30px;
+      //     }
+      //   }
+      // }
+      //   .icon {
+      //     img {
+      //       @include mobile {
+      //         width: 58%;
+      //         display: block;
+      //         padding-left: 27px;
+      //       }
+      //     }
+      //   }
+      // }
+      .icon-list {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 2rem;
+
+        @include mobile {
+          margin-top: 0.2rem;
+        }
+
+        a {
+          color: white;
+          border-radius: 50%;
+          height: 45px;
+          width: 45px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 22px;
+
+          @include mobile {
+            height: 28px;
+            width: 28px;
+            font-size: 14px;
+          }
+
+          @include tablet {
+            height: 38px;
+            width: 38px;
+            font-size: 18px;
+          }
+        }
+
+        .instagram {
+          background: linear-gradient(
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
+          );
+        }
+
+        .linkedIn {
+          background-color: #0e76a8;
+        }
+
+        .facebook {
+          background-color: #4267b2;
+        }
+
+        .twitter {
+          display: none;
+          background-color: #1da1f2;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid white;
+    border-top-style: dotted;
+    margin-top: 10px;
+    padding-top: 10px;
+    justify-content: center;
+    gap: 39px;
+
+    @include mobile {
+      gap: 18px;
+      // justify-content: start;
+      // display: block;
+    }
+
+    // @include small-device {
+    //   gap: 9px;
+    //   // display: block;
+    // }
+    a {
+      color: #808080;
+      font-family: Poppins;
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      /* 100% */
+      letter-spacing: 0.15px;
+      text-decoration-line: underline;
+      cursor: pointer;
+
+      @include mobile {
+        font-size: 10px;
+      }
+    }
+  }
+}

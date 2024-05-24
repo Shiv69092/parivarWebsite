@@ -1,0 +1,23 @@
+@import "../../App.scss";
+
+.our-services {
+  @include mobile {
+    .title-comp {
+      color: #000;
+      font-family: Poppins;
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 23px; /* 100% */
+    }
+    hr {
+      display: none;
+    }
+  }
+
+  .title-comp {
+    @include tablet {
+      font-size: 44px;
+    }
+  }
+}
